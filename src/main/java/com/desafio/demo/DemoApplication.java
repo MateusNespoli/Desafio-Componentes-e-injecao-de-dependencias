@@ -24,14 +24,14 @@ public class DemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		Order order1 = new Order(1034, 150.00, 20.00);
-		System.out.println(orderService.total(order1));
-		System.out.println(order1.getBasic());
+		System.out.printf("\nPedido código: %d\nValor total: %.2f\n", order1.getCode(), orderService.total(order1));
 
 		Order order2 = new Order(2282, 800.00, 10.00);
-		System.out.println(orderService.total(order2));
+		System.out.printf("\nPedido código: %d\nValor total: %.2f\n", order2.getCode(), orderService.total(order2));
 
 		Order order3 = new Order(1309, 95.90, 00.00);
-		System.out.println(orderService.total(order3));
+		System.out.printf("\nPedido código: %d\nValor total: %.2f\n", order3.getCode(), orderService.total(order3));
+
 
 	}
 }
